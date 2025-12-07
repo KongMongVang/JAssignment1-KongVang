@@ -1,0 +1,9 @@
+//- The following line says to use the layout.pug template as the base.
+extends layout
+
+//- By appending to a block, you can insert some content to the END of the existing scripts block.
+block append scripts 
+  script(src="/js/home.js")
+
+block layout-content 
+  h1 Welcome to my portfolio admin

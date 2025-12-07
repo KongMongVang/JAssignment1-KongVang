@@ -1,0 +1,25 @@
+extends layout 
+
+block layout-content 
+    h1 Edit project Link 
+    form(method="post", action="/admin/projects/edit/submit")
+        input(type="hidden", name="linkId", value=editProject._id)
+
+        div 
+            label(for="link-name") Project Name: 
+            input(type="text", id="link-name", name="name", value=editProject.name)
+
+        div 
+            label(for="description") Description: 
+            input(type="text", id="description", name="description", value=editProject.description)
+
+        div 
+            label(for="href") Link URI: 
+            input(type="text", id="href", name="path", value=editProject.path)
+
+        div 
+            label(for="repo") Repo: 
+            input(type="text", id="repo", name="repo", value=editProject.repo)
+
+        button(type="submit") Update link
+        

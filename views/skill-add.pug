@@ -1,0 +1,17 @@
+extends layout
+block layout-content
+  h1 Add skills Link
+  form(method="post", action="/admin/skills/add/submit")
+    div
+      label(for="link-name") Skill Name:
+      input(type="text", id="link-name", name="name", placeholder="Skill")
+    div
+      label(for="experience") Years of experience:
+      input(type="text", id="experience", name="experience", placeholder="Years of experience")
+    div
+      label(for="language") Programming Languages:
+      input(type="text", id="language", name="language", placeholder="Programming language")
+    div
+      label(for="proficiency") Skill proficiency:
+      input(type="text", id="proficiency", name="proficiency", placeholder="Skill proficiency")
+    button(type="submit") Add skill

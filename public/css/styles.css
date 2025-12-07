@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+body {
+  font-family:'Michroma', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(51, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#site-name a {
+  color: red;
+  text-decoration: none;
+  font-size: 60px;
+  line-height: 1;
+}
+
+#site-name {
+  margin: 5px 0 25px 0;
+}
+
+#nav-links {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+#nav-links a {
+  text-decoration: none;
+  color: blue;
+  font-size: 20px;
+}
+
+#nav-links a:hover {
+  color: darkblue;
+  text-decoration: none;
+}
+
+#header {
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  text-align: center;
+  width: 95%;
+  max-width: 1400px;
+  flex-shrink: 0;
+}
+
+#main {
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  width: 95%;
+  max-width: 1400px;
+  flex: 1;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer {
+  padding: 8px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: left;  /* Changed from center to left */
+  width: 95%;
+  max-width: 1400px;
+  flex-shrink: 0;
+}
+
+#footer p {
+  margin: 0;
+  color: #333;
+  font-size: 11px;
+}
+
+/* Table styling for admin pages */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  table-layout: fixed;
+  font-size: 12px;
+}
+
+table th {
+  background-color: rgb(51, 255, 0);
+  padding: 6px;
+  text-align: left;
+  border: 2px solid red;
+  font-size: 12px;
+}
+
+table td {
+  padding: 6px;
+  border: 1px solid #797979;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+/* Make action links smaller */
+table td a {
+  font-size: 11px;
+  margin: 0 3px;
+}
+
+/* Button styling */
+button, input[type="submit"] {
+  background-color: blue;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: darkblue;
+}
+
+/* Form styling */
+form {
+  margin-top: 15px;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* Link styling */
+
+a {
+  color: blue;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+a:hover {
+  color: darkblue;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Page title */
+h1 {
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin: 5px 0;
+}

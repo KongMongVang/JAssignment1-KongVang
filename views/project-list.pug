@@ -1,0 +1,29 @@
+extends layout 
+
+block layout-content 
+  h1 Administer project links 
+  a(href="/admin/projects/add") + Add new project
+  table 
+    thead 
+      tr 
+        th Project Name
+        th Project Description
+        th Project Link
+        th Project Repo
+        th Operations 
+    tbody 
+      each link in projects
+        tr 
+          td #{link.name} 
+          td #{link.description}
+          td #{link.path}
+          td #{link.repo}
+          td 
+            form(method="get", action="/admin/projects/delete")
+              input(type="hidden", name="linkId", value=link._id)
+              button(type="submit") Delete
+          
+            form(method="get", action="/admin/projects/edit")
+              input(type="hidden", name="linkId", value=link._id)
+              button(type="submit") Edit
+  

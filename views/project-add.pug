@@ -1,0 +1,23 @@
+extends layout 
+
+block layout-content 
+  h1 Add projects Link
+  form(method="post", action="/admin/projects/add/submit")
+    
+    div 
+      label(for="link-name") Project Name: 
+      input(type="text", id="link-name", name="name", placeholder="Project")
+
+    div 
+      label(for="description") Description: 
+      input(type="text", id="description", name="description", placeholder="Project description")
+
+    div 
+      label(for="href") Link URI: 
+      input(type="text", id="href", name="path", placeholder="Project URL")
+
+    div 
+      label(for="repo") Repo: 
+      input(type="text", id="repo", name="repo", placeholder="Project repo")
+
+    button(type="submit") Add projects

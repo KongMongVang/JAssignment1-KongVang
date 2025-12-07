@@ -1,0 +1,29 @@
+extends layout 
+
+block layout-content 
+  h1 Administer skills links 
+  a(href="/admin/skills/add") + Add new skill
+  table 
+    thead 
+      tr 
+        th Skill Name
+        th Years of experience
+        th Programming languages
+        th Skill proficiency 
+        th Operations 
+    tbody 
+      each link in skills
+        tr 
+          td #{link.name} 
+          td #{link.experience}
+          td #{link.language}
+          td #{link.proficiency}
+          td 
+            form(method="get", action="/admin/skills/delete")
+              input(type="hidden", name="linkId", value=link._id)
+              button(type="submit") Delete
+          
+            form(method="get", action="/admin/skills/edit")
+              input(type="hidden", name="linkId", value=link._id)
+              button(type="submit") Edit
+  

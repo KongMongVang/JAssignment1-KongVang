@@ -1,0 +1,25 @@
+extends layout 
+
+block layout-content 
+    h1 Edit skill Link 
+    form(method="post", action="/admin/skills/edit/submit")
+        input(type="hidden", name="linkId", value=editSkill._id)
+
+        div 
+            label(for="link-name") Skill Name: 
+            input(type="text", id="link-name", name="name", value=editSkill.name)
+
+        div 
+            label(for="experience") Years of experience: 
+            input(type="text", id="experience", name="experience", value=editSkill.experience)
+
+        div 
+            label(for="language") Programming Language: 
+            input(type="text", id="language", name="language", value=editSkill.language)
+
+        div 
+            label(for="proficiency") Skill proficiency: 
+            input(type="text", id="proficiency", name="proficiency", value=editSkill.proficiency)
+
+        button(type="submit") Update skill
+        
